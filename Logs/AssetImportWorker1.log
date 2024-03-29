@@ -1,0 +1,342 @@
+Using pre-set license
+Built from '2022.3/release' branch; Version is '2022.3.0f1 (fb119bb0b476) revision 16454043'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit CoreCountrySpecific' Language: 'zh' Physical Memory: 32496 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity 2022.3.0f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+C:/Users/qingyuanzi/Desktop/Memo-Internship
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+29499
+Successfully changed project path to: C:/Users/qingyuanzi/Desktop/Memo-Internship
+C:/Users/qingyuanzi/Desktop/Memo-Internship
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [6824] Host "[IP] 192.168.229.1 [Port] 0 [Flags] 2 [Guid] 1258200845 [EditorId] 1258200845 [Version] 1048832 [Id] WindowsEditor(7,Qingyuanzi) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [6824] Host "[IP] 192.168.229.1 [Port] 0 [Flags] 2 [Guid] 1258200845 [EditorId] 1258200845 [Version] 1048832 [Id] WindowsEditor(7,Qingyuanzi) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+Refreshing native plugins compatible for Editor in 8.36 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.0f1 (fb119bb0b476)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity 2022.3.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/qingyuanzi/Desktop/Memo-Internship/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 4070 Laptop GPU (ID=0x2820)
+    Vendor:   NVIDIA
+    VRAM:     7948 MB
+    Driver:   31.0.15.5123
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity 2022.3.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity 2022.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity 2022.3.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56288
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity 2022.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002966 seconds.
+- Loaded All Assemblies, in  0.204 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.181 seconds
+Domain Reload Profiling: 385ms
+	BeginReloadAssembly (51ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (0ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (89ms)
+		LoadAssemblies (50ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (85ms)
+			TypeCache.Refresh (84ms)
+				TypeCache.ScanAssembly (77ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (182ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (144ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (6ms)
+			SetLoadedEditorAssemblies (6ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (89ms)
+			ProcessInitializeOnLoadMethodAttributes (42ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\qingyuanzi\Desktop\Memo-Internship\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\qingyuanzi\Desktop\Memo-Internship\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  0.754 seconds
+Refreshing native plugins compatible for Editor in 2.71 ms, found 4 plugins.
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.352 seconds
+Domain Reload Profiling: 1105ms
+	BeginReloadAssembly (80ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (3ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (12ms)
+	RebuildCommonClasses (22ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (614ms)
+		LoadAssemblies (473ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (178ms)
+			TypeCache.Refresh (163ms)
+				TypeCache.ScanAssembly (156ms)
+			ScanForSourceGeneratedMonoScriptInfo (13ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (353ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (257ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (2ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (44ms)
+			ProcessInitializeOnLoadAttributes (186ms)
+			ProcessInitializeOnLoadMethodAttributes (18ms)
+			AfterProcessingInitializeOnLoad (4ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 3.13 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3954 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 63 unused Assets / (60.3 KB). Loaded Objects now: 4418.
+Memory consumption went from 138.4 MB to 138.4 MB.
+Total: 2.478900 ms (FindLiveObjects: 0.172100 ms CreateObjectMapping: 0.058800 ms MarkObjects: 2.158400 ms  DeleteObjects: 0.088400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 47004.135245 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(131a6b21c8605f84396be9f6751fb6e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(131a6b21c8605f84396be9f6751fb6e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd99c5e1824b8c2005b15e18b2aeeaaf6') in 0.001786 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1134.747691 seconds.
+  path: Assets/Scenes/sfx/sound-27.ogg
+  artifactKey: Guid(bacf465e3a6ede24cabf87d959c022f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-27.ogg using Guid(bacf465e3a6ede24cabf87d959c022f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f1f7a39452c45222291fc5673d51680') in 0.140365 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Scenes/sfx/sound-43.ogg
+  artifactKey: Guid(c755c41ce6c9b1e44a9c3d210bdaa03e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-43.ogg using Guid(c755c41ce6c9b1e44a9c3d210bdaa03e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68fbd11449941d288f08dc34f26cc0df') in 0.016399 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Scenes/sfx/sound-51.ogg
+  artifactKey: Guid(a12c2b6b8d1489d44aaa2269ca082417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-51.ogg using Guid(a12c2b6b8d1489d44aaa2269ca082417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a421ef3566a5c420b5b86bda84b33224') in 0.023432 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Scenes/sfx/sound-40.ogg
+  artifactKey: Guid(0c2f392573152134ca0aa3970706c911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-40.ogg using Guid(0c2f392573152134ca0aa3970706c911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1576512efc331b21f59fa4d8822aa794') in 0.017232 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Scenes/sfx/sound-54.ogg
+  artifactKey: Guid(e69e131aacd836041b25b293753d4269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-54.ogg using Guid(e69e131aacd836041b25b293753d4269) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b53ef6b983a4e559972c9ffa511e7bfc') in 0.015782 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Scenes/sfx/sound-39.ogg
+  artifactKey: Guid(0906795fe9a5d544ca3ecd509487ee17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-39.ogg using Guid(0906795fe9a5d544ca3ecd509487ee17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9f3c03c9f209539b42c4c2d853a3269') in 0.013958 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Scenes/sfx/sound-53.ogg
+  artifactKey: Guid(0fe17fc0494bfeb49bb4ab81bb47ef92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-53.ogg using Guid(0fe17fc0494bfeb49bb4ab81bb47ef92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ec7ed9e79053aede5a275fa915238ce') in 0.012579 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Scenes/sfx/sound-34.ogg
+  artifactKey: Guid(6ab1a41659f5cf047b8356ada490af29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-34.ogg using Guid(6ab1a41659f5cf047b8356ada490af29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f064123a1d570fb37b7a38e1494b7e3') in 0.014682 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Scenes/sfx/sound-58.ogg
+  artifactKey: Guid(fdb1ceb83c3b94c46890910663506eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-58.ogg using Guid(fdb1ceb83c3b94c46890910663506eb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99060dfa381a73eaa66fe262fc07dadc') in 0.012616 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Scenes/sfx/sound-60.ogg
+  artifactKey: Guid(1db01d67f50749b4cadced00f3259718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-60.ogg using Guid(1db01d67f50749b4cadced00f3259718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '799ef0d8cb6cb285ea3ca03973268354') in 0.016458 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Scenes/sfx/sound-31.ogg
+  artifactKey: Guid(2f8af8ea3801eff4a817697c16187efb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-31.ogg using Guid(2f8af8ea3801eff4a817697c16187efb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93a7848e07f842ac5c67422e3d299084') in 0.015109 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Scenes/sfx/sound-85.ogg
+  artifactKey: Guid(b7ef558663edeca418d4e81f1c5c1161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-85.ogg using Guid(b7ef558663edeca418d4e81f1c5c1161) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62f6725b34e43a80eb53fb41a8788c40') in 0.012880 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Scenes/sfx/sound-49.ogg
+  artifactKey: Guid(0b2b9682c595a0942bf228c1e7a276f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-49.ogg using Guid(0b2b9682c595a0942bf228c1e7a276f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a20ffc8aa16b19ca7eb9de0bc2ea352') in 0.014065 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Scenes/sfx/sound-28.ogg
+  artifactKey: Guid(ec75073422e55ea47a7232ade544fdab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-28.ogg using Guid(ec75073422e55ea47a7232ade544fdab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e087fba0b86e70308c8a555f01f71b8') in 0.011659 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Scenes/sfx/sound-42.ogg
+  artifactKey: Guid(50d42a4d50b4ec943a31dd8623a2a371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-42.ogg using Guid(50d42a4d50b4ec943a31dd8623a2a371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ed253f630ac1b1e61510c4d56cd3cf6') in 0.012889 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Scenes/sfx/sound-50.ogg
+  artifactKey: Guid(26f09dc64dfc34541bf5021306af1ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-50.ogg using Guid(26f09dc64dfc34541bf5021306af1ee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74acfbf93ef6d4acbfd9f77226bb3fef') in 0.014787 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Scenes/sfx/sound-63.ogg
+  artifactKey: Guid(8a9f78d05dafae94dba6f9ea58b8ff7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-63.ogg using Guid(8a9f78d05dafae94dba6f9ea58b8ff7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '912a48e404363398db400f62f6ac16ba') in 0.017893 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Scenes/sfx/sound-29.ogg
+  artifactKey: Guid(9055ca626302d8e4ea5cc34cf43f0473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-29.ogg using Guid(9055ca626302d8e4ea5cc34cf43f0473) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0aab4fe8e073626adc46519b6464a7a') in 0.013410 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Scenes/sfx/sound-66.ogg
+  artifactKey: Guid(06aba41f16f3e834998dd32431edc8d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/sfx/sound-66.ogg using Guid(06aba41f16f3e834998dd32431edc8d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ba004ec17dff94107e0aeb9b92cd6ff') in 0.016064 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
