@@ -1,1 +1,8 @@
-#
+/UserSettings
+/.vsconfig
+/.vs
+/Library
+/Logs
+/Temp
+*.meta
+*.cache

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: sprite-11-1
+  m_Name: sprite-11-8
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 681b24bdf1f5ddd43b2dd698dfd61b06, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9d835706f1126e34a98211ff6cf90234, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

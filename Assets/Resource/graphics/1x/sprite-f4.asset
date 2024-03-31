@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: sprite-floor01
+  m_Name: sprite-f4
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -1216477401, guid: d9be55974e433a54685cbdf41c6bddad, type: 3}
+  m_Sprite: {fileID: -1631952426, guid: 9d835706f1126e34a98211ff6cf90234, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
