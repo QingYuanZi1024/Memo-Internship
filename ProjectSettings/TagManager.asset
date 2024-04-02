@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Banana
+  - Stone
+  - Pepper
+  - Ice
+  - Wood
+  - Snake
+  - Boundary
   layers:
   - Default
   - TransparentFX
@@ -13,10 +20,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - -2
+  - -1
+  - 0
+  - +1
   - 
   - 
   - 
@@ -40,4 +47,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: 
+    uniqueID: 4194650429
+    locked: 0
+  - name: -2
+    uniqueID: 4287761751
+    locked: 0
+  - name: -1
+    uniqueID: 4198697487
+    locked: 0
+  - name: 0
+    uniqueID: 3776367345
+    locked: 0
+  - name: +1
+    uniqueID: 3079700481
     locked: 0

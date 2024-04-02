@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     // Corresponding to four states
     // public bool Existing;
     public string States;  
-    // public enum States { Existing, Spraying, Falling, Showing };
+    // public enum States { Existing, Spraying, Falling };
     // 0 represents UP, 1 represents DOWN, 2 represnts LEFT, 3 represents RIGHT
     // Texture of the snake's head
     public List<Sprite> NormalSnakeHead;
