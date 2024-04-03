@@ -4,36 +4,44 @@ using UnityEngine;
 
 public class Banana : MonoBehaviour
 {
-
-    public float FallSpeed = 5f;
+    private Rigidbody2D rb;
+    public float FallSpeed = 8f;
     public string States;
     // Start is called before the first frame update
     void Start()
     {
         States = "Existing";
+        rb = GetComponent<Rigidbody2D>();
+        Debug.Log(rb.bodyType);
+        Debug.Log("123");
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("test01");
+        //transform.Translate(Vector3.down * FallSpeed * Time.deltaTime);
+        // Debug.Log("test01");
         JudgeFalling();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // 检测到进入触发器的物体是你要控制的物体
-        if (other.CompareTag("GravityRange"))
+        //Debug.Log("test02");
+        if (other.gameObject.tag == "GravityRange")
         {
             States = "Falling";
+            // rb.bodyType = RigidbodyType2D.Dynamic;
+            gameObject.layer = LayerMask.NameToLayer("-2");
         }
+
+        if (other.gameObject.tag == "Boundary")
+            Destroy(gameObject);
     }
 
     void JudgeFalling()
     {
         if (States == "Falling")
         {
-            gameObject.layer = LayerMask.NameToLayer("-2");
             transform.Translate(Vector3.down * FallSpeed * Time.deltaTime);
         }
     }

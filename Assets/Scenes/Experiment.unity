@@ -541,7 +541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 260586502}
-  - component: {fileID: 260586504}
+  - component: {fileID: 260586503}
   m_Layer: 0
   m_Name: Boundary
   m_TagString: Boundary
@@ -564,8 +564,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &260586504
-BoxCollider2D:
+--- !u!68 &260586503
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -597,18 +597,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 80, y: 30}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -30, y: 15}
+  - {x: -30, y: -15}
+  - {x: 30, y: -15}
+  - {x: 30, y: 15}
+  - {x: -30, y: 15}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1556397264}
-  - component: {fileID: 1556397265}
+  - component: {fileID: 1556397266}
   m_Layer: 0
   m_Name: GravityRange
   m_TagString: GravityRange
@@ -986,8 +985,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1556397265
-BoxCollider2D:
+--- !u!68 &1556397266
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1019,18 +1018,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 16.3, y: 10.3}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -8.3, y: 5.3}
+  - {x: -8.3, y: -5.3}
+  - {x: 8.3, y: -5.3}
+  - {x: 8.3, y: 5.3}
+  - {x: -8.3, y: 5.3}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1656876473 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4407708632851397429, guid: 13ad6fe3dfe6415419158c1d7eb67f7e, type: 3}
@@ -2892,6 +2890,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Banana_02
       objectReference: {fileID: 0}
+    - target: {fileID: 4035294029267097566, guid: 21ce58f4b74f21b4e8a5c8e2e1bda1e8, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667504025328280619, guid: 21ce58f4b74f21b4e8a5c8e2e1bda1e8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3039,11 +3045,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4035294029267097566, guid: 21ce58f4b74f21b4e8a5c8e2e1bda1e8, type: 3}
       propertyPath: m_Mass
-      value: 0.7225
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4035294029267097566, guid: 21ce58f4b74f21b4e8a5c8e2e1bda1e8, type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4035294029267097566, guid: 21ce58f4b74f21b4e8a5c8e2e1bda1e8, type: 3}
       propertyPath: m_Simulated
@@ -3068,6 +3074,14 @@ PrefabInstance:
     - target: {fileID: 4035294029267097566, guid: 21ce58f4b74f21b4e8a5c8e2e1bda1e8, type: 3}
       propertyPath: m_SleepingMode
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5311935400548967487, guid: 21ce58f4b74f21b4e8a5c8e2e1bda1e8, type: 3}
+      propertyPath: States
+      value: 123
+      objectReference: {fileID: 0}
+    - target: {fileID: 5667504025328280619, guid: 21ce58f4b74f21b4e8a5c8e2e1bda1e8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
