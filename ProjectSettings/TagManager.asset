@@ -11,6 +11,7 @@ TagManager:
   - Wood
   - Snake
   - Boundary
+  - GravityRange
   layers:
   - Default
   - TransparentFX

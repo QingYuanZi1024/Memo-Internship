@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e157b1e5a465ecb49aa9fb50164c97bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FallSpeed: 5
   States: 
 --- !u!210 &2376235256567878044
 SortingGroup:

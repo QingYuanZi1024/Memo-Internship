@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Banana : MonoBehaviour
 {
+
+    public float FallSpeed = 5f;
     public string States;
     // Start is called before the first frame update
     void Start()
@@ -14,14 +16,25 @@ public class Banana : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log("test01");
+        JudgeFalling();
     }
 
-
-    private void OnCollisionEnter2D(Collision2D AnotherObj)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (AnotherObj.gameObject.CompareTag("Boundary"))
-            Destroy(gameObject);
+        // 检测到进入触发器的物体是你要控制的物体
+        if (other.CompareTag("GravityRange"))
+        {
+            States = "Falling";
+        }
     }
 
+    void JudgeFalling()
+    {
+        if (States == "Falling")
+        {
+            gameObject.layer = LayerMask.NameToLayer("-2");
+            transform.Translate(Vector3.down * FallSpeed * Time.deltaTime);
+        }
+    }
 }
