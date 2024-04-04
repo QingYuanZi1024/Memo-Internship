@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite-1-4_1
+      name: sprite-normal_1
       rect:
         serializedVersion: 2
         x: 145
         y: 147
-        width: 94
-        height: 94
+        width: 95
+        height: 95
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 1}
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sprite-1-4_1: 1991668110
+      sprite-normal_1: 1991668110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite-19-2_0
+      name: sprite-hole-closed
       rect:
         serializedVersion: 2
         x: 17
@@ -118,7 +118,7 @@ TextureImporter:
         width: 95
         height: 95
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sprite-19-2_0: 1636790670
+      sprite-hole-closed: 1636790670
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

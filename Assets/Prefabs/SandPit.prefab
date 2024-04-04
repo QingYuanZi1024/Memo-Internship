@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8085503634677164513}
   - component: {fileID: 3681355699439318173}
   - component: {fileID: 3636159276726409843}
+  - component: {fileID: 7902390618404682293}
   m_Layer: 0
   m_Name: SandPit
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1190562983, guid: eb48a02511a40bd44ac4ebc388f7796f, type: 3}
+  m_Sprite: {fileID: 1576060826, guid: c1e4768f3ca8c3441a582b4f8c1a2d56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,11 +119,11 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.55}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.0212766, y: 1.0212766}
+    oldSize: {x: 1.0106384, y: 1.0106384}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -158,3 +159,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!210 &7902390618404682293
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414319737233376460}
+  m_Enabled: 1
+  m_SortingLayerID: -518599951
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

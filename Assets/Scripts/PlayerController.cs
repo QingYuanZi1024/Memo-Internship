@@ -8,13 +8,25 @@ public class PlayerController : MonoBehaviour
 {
     // Corresponding to four states
     // public bool Existing;
+
     public string States;  
     // public enum States { Existing, Spraying, Falling };
     // 0 represents UP, 1 represents DOWN, 2 represnts LEFT, 3 represents RIGHT
     // Texture of the snake's head
-    public List<Sprite> NormalSnakeHead;
+
+    public List<Sprite> NormalSnakeHead;  // 
+
+    public List<Sprite> HappySnakeHead;  // eat banana
+
+    public List<Sprite> SadSnakeHead;  // miss food
+
+    public List<Sprite> FallSnakeHead;  // when falling
+
+    public List<Sprite> SpraySnakeHead;  // when spraying
+
     // Direction of the snake's head
     public Vector2 SnakeHeadDirection;
+
     // Direction of the snake's movement
     public Vector2 SnakeMoveDirection;
 
@@ -99,5 +111,62 @@ public class PlayerController : MonoBehaviour
     private void CrashJudge()
     {
 
+    }
+
+    public void UpdateHeadSprite(Vector2 direction)
+    {
+        if (States == "Existing")
+        {
+            if (direction == Vector2.up)
+            {
+                GetComponent<SpriteRenderer>().sprite = NormalSnakeHead[0];
+            }
+            if (direction == Vector2.down)
+            {
+                GetComponent<SpriteRenderer>().sprite = NormalSnakeHead[1];
+            }
+            if (direction == Vector2.left)
+            {
+                GetComponent<SpriteRenderer>().sprite = NormalSnakeHead[2];
+            }
+            if (direction == Vector2.right)
+            {
+                GetComponent<SpriteRenderer>().sprite = NormalSnakeHead[3];
+            }
+        }
+        if (States == "Falling")
+        {
+            if (direction == Vector2.up)
+            {
+                GetComponent<SpriteRenderer>().sprite = FallSnakeHead[0];
+            }
+            if (direction == Vector2.down)
+            {
+                GetComponent<SpriteRenderer>().sprite = FallSnakeHead[1];
+            }
+            if (direction == Vector2.left)
+            {
+                GetComponent<SpriteRenderer>().sprite = FallSnakeHead[2];
+            }
+            if (direction == Vector2.right)
+            {
+                GetComponent<SpriteRenderer>().sprite = NormalSnakeHead[3];
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        //Debug.Log("test02");
+        if (other.gameObject.tag == "GravityRange")
+        {
+            States = "Falling";
+            // rb.bodyType = RigidbodyType2D.Dynamic;
+            gameObject.layer = LayerMask.NameToLayer("-2");
+            UpdateHeadSprite(SnakeHeadDirection);
+        }
+
+        if (other.gameObject.tag == "Boundary")
+            Destroy(gameObject);
     }
 }

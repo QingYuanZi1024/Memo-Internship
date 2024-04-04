@@ -58,10 +58,14 @@
     <Analyzer Include="C:\Program Files\Unity 2022.3.0f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\FinalHole.cs" />
     <Compile Include="Assets\Scripts\Stone.cs" />
+    <Compile Include="Assets\Scripts\Wood.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Pepper.cs" />
     <Compile Include="Assets\Scripts\Banana.cs" />
+    <Compile Include="Assets\Scripts\Ice.cs" />
+    <Compile Include="Assets\Scripts\SandPit.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
   </ItemGroup>
   <ItemGroup>

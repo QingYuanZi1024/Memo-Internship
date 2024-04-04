@@ -12,8 +12,8 @@ public class Banana : MonoBehaviour
     {
         States = "Existing";
         rb = GetComponent<Rigidbody2D>();
-        Debug.Log(rb.bodyType);
-        Debug.Log("123");
+        // Debug.Log(rb.bodyType);
+        // Debug.Log("123");
     }
 
     // Update is called once per frame

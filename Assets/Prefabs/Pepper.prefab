@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 1862550603935241522}
   - component: {fileID: 4035294029267097566}
   - component: {fileID: 5667504025328280619}
-  m_Layer: 0
+  - component: {fileID: 5916300874988985811}
+  - component: {fileID: 3375395075054655342}
+  m_Layer: 10
   m_Name: Pepper
-  m_TagString: Untagged
+  m_TagString: Pepper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1862550603935241522
 SpriteRenderer:
@@ -158,3 +160,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.85, y: 0.85}
   m_EdgeRadius: 0
+--- !u!114 &5916300874988985811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093004914554945637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc04d67b4cdafb42a0e347f6026b2a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!210 &3375395075054655342
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093004914554945637}
+  m_Enabled: 1
+  m_SortingLayerID: -518599951
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
