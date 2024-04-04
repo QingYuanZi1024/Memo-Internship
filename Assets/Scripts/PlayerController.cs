@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        GetKeyValue();
     }
 
 
@@ -168,5 +168,10 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.tag == "Boundary")
             Destroy(gameObject);
+    }
+
+    void SnakeMove(Vector2 direction)
+    {
+        transform.Translate(direction);
     }
 }

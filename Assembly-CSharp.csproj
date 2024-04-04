@@ -58,6 +58,7 @@
     <Analyzer Include="C:\Program Files\Unity 2022.3.0f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\SnakeSeq.cs" />
     <Compile Include="Assets\Scripts\FinalHole.cs" />
     <Compile Include="Assets\Scripts\Stone.cs" />
     <Compile Include="Assets\Scripts\Wood.cs" />
