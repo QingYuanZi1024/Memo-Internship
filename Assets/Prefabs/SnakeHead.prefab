@@ -144,7 +144,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72212cec8ddd1eb4cacb85424f4112eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FallSpeed: 8
   States: 
   NormalSnakeHead:
   - {fileID: 1991668110, guid: 65fa3b25a68117446b97de4dc1b85597, type: 3}
@@ -198,12 +199,16 @@ MonoBehaviour:
   - {fileID: -1788592554, guid: 42b0e6a7c578d114e8b2d08725904e9c, type: 3}
   - {fileID: -1788592554, guid: ca63f5d49a001764eb99dc26fa5964cb, type: 3}
   - {fileID: -1788592554, guid: 9d3d486e101180f42bc58739ad4250cf, type: 3}
+  SnakeBodies: []
+  SnakeTail: {fileID: 0}
+  SnakeSeqPrefab: {fileID: 0}
+  FireEffectPrefab: {fileID: 0}
   SnakeHeadDirection: {x: 0, y: 0}
   SnakeMoveDirection: {x: 0, y: 0}
-  SnakeTail: []
   detectLayer:
     serializedVersion: 2
     m_Bits: 0
+  HangOrNot: 0
 --- !u!210 &5659154478858666288
 SortingGroup:
   m_ObjectHideFlags: 0

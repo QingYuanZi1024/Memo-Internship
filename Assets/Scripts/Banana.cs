@@ -5,8 +5,11 @@ using UnityEngine;
 public class Banana : MonoBehaviour
 {
     private Rigidbody2D rb;
+
     public float FallSpeed = 8f;
+
     public string States;
+
     // Start is called before the first frame update
     void Start()
     {
