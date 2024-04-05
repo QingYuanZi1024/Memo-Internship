@@ -1417,6 +1417,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SnakeHead
       objectReference: {fileID: 0}
+    - target: {fileID: 5659154478858666288, guid: c2b69c14b5ba37646b0f8f8fe6dd1ff4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5659154478858666288, guid: c2b69c14b5ba37646b0f8f8fe6dd1ff4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -518599951
+      objectReference: {fileID: 0}
     - target: {fileID: 5671551516460290281, guid: c2b69c14b5ba37646b0f8f8fe6dd1ff4, type: 3}
       propertyPath: m_IsTrigger
       value: 1

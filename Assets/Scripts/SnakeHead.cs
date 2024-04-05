@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.Rendering;
 using static UnityEditor.ShaderData;
 using static UnityEditor.VersionControl.Asset;
 
@@ -43,6 +45,8 @@ public class SnakeHead : MonoBehaviour
     // public List<Sprite> SnakeTail;
 
     public LayerMask detectLayer;
+
+    private SortingGroup sortingGroup;
 
     public bool HangOrNot;
 
@@ -316,6 +320,10 @@ public class SnakeHead : MonoBehaviour
             {
                 States = "Falling";
                 gameObject.layer = LayerMask.NameToLayer("-2");
+                sortingGroup = GetComponent<SortingGroup>();
+                sortingGroup.sortingLayerName = "-2";
+
+                //gameObject.GetComponent<SortingGroup>.SortingLayer = LayerMask.NameToLayer("-2");
                 // UpdateHeadSprite(SnakeHeadDirection);
             }
         }
