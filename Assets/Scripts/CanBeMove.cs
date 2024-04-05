@@ -50,29 +50,51 @@ public class CanBeMove : MonoBehaviour
         }
     }
 
-    public string RecursionJudge(Vector3 MoveDirection)
+    public void ObjectMove(Vector3 MoveDirection)
+    {
+        transform.Translate(MoveDirection);
+    }
+
+    public bool EatOrNot()
+    {
+            if (tag == "Pepper" || tag == "Banana")
+            {
+                RealiseEat(SnakeHead);
+                return true;
+            }
+            else return false;
+    }
+
+    public bool RecursionJudgeAndMove(Vector3 MoveDirection, bool TheFirstOrNot)
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, MoveDirection, 1f, detectLayer);
         // Debug.Log("hit");
-
+        if (!hit)
+        {
+            ObjectMove(MoveDirection);
+            return true;
+        }
         if (hit)
         {
-            if (hit.collider.tag.Equals("Stone") || hit.collider.tag.Equals("Wood"))
+            if (hit.collider.GetComponent<CanBeMove>() != null)
             {
-                return hit.collider.tag;
-            }
-            if (hit.collider.tag.Equals("Ice") || hit.collider.tag.Equals("Banana") || hit.collider.tag.Equals("Pepper"))
-            {
-                return RecursionJudge(MoveDirection);
+                bool TempJudge = hit.collider.GetComponent<CanBeMove>().RecursionJudgeAndMove(MoveDirection, false);
+                if (TempJudge)
+                {
+                    ObjectMove(MoveDirection);
+                }
+                else
+                {
+                    if (TheFirstOrNot)
+                        return EatOrNot();
+                }
             }
             else
             {
-                return "canmove";
+                if (TheFirstOrNot)
+                    return EatOrNot();
             }
         }
-        else
-        {
-            return "canmove";
-        }
+        return false;
     }
 }

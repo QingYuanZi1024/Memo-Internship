@@ -128,9 +128,9 @@ public class SnakeHead : MonoBehaviour
         }
     }
 
-    private void CrashJudge()
+    private void CrashJudgeAndMove()
     {
-        string RecurStr = "null";
+        bool TempJudge;
 
         if (SnakeMoveDirection != Vector2.zero)
         {
@@ -142,14 +142,13 @@ public class SnakeHead : MonoBehaviour
             }
             if (hit && (hit.collider.tag.Equals("Banana") || hit.collider.tag.Equals("Pepper") || hit.collider.tag.Equals("Ice")))
             {
-                RecurStr = hit.collider.GetComponent<Ice>().RecursionJudge(SnakeMoveDirection);
+                TempJudge = hit.collider.GetComponent<CanBeMove>().RecursionJudgeAndMove(SnakeMoveDirection, true);
+                if (TempJudge)
+                {
+                    SnakeMoveDirection = Vector2.zero;
+                }
             }
         }
-        if (RecurStr == "Stone" || RecurStr == "wood")
-        {
-
-        }
-
     }
 
     private void MoveAction()
