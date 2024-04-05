@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5816144821388940523
 SpriteRenderer:
@@ -199,7 +199,9 @@ MonoBehaviour:
   - {fileID: -1788592554, guid: 42b0e6a7c578d114e8b2d08725904e9c, type: 3}
   - {fileID: -1788592554, guid: ca63f5d49a001764eb99dc26fa5964cb, type: 3}
   - {fileID: -1788592554, guid: 9d3d486e101180f42bc58739ad4250cf, type: 3}
-  SnakeBodies: []
+  SnakeBodies:
+  - {fileID: 0}
+  - {fileID: 0}
   SnakeTail: {fileID: 0}
   SnakeSeqPrefab: {fileID: 0}
   FireEffectPrefab: {fileID: 0}
@@ -207,7 +209,7 @@ MonoBehaviour:
   SnakeMoveDirection: {x: 0, y: 0}
   detectLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   HangOrNot: 0
 --- !u!210 &5659154478858666288
 SortingGroup:

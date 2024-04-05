@@ -12,6 +12,7 @@ TagManager:
   - Snake
   - Boundary
   - GravityRange
+  - SnakeTail
   layers:
   - Default
   - TransparentFX

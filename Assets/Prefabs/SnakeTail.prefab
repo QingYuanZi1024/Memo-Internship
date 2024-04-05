@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3823676983032277932}
   - component: {fileID: -7848007417779677325}
   - component: {fileID: -9127825794717514644}
+  - component: {fileID: 1709535513518174859}
   m_Layer: 0
   m_Name: SnakeTail
   m_TagString: Untagged
@@ -33,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2093488429734684767
 SpriteRenderer:
@@ -171,3 +172,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1709535513518174859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6938040142136730863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e25d1b79e154c45aca0c0b00bda71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HangOrNot: 0
+  SnakeTailMode:
+  - {fileID: -262186798, guid: 6ed4a946d55f4ce469240543e5219296, type: 3}
+  - {fileID: -262186798, guid: 93d7930189f8cb049bda51138b0af6e4, type: 3}
+  - {fileID: -262186798, guid: 0778a2ad7701cc645b79e0abf1864871, type: 3}
+  - {fileID: -262186798, guid: fc4134bfdab501e43903bd1fd854e88b, type: 3}

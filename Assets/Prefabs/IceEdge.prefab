@@ -184,3 +184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de4b6dcad3de634eb46d9e3603dd7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FallSpeed: 8
+  States: 
+  SnakeHead: {fileID: 0}
+  detectLayer:
+    serializedVersion: 2
+    m_Bits: 0

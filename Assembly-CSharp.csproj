@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\SnakeBody.cs" />
     <Compile Include="Assets\Scripts\SnakeTail.cs" />
+    <Compile Include="Assets\Scripts\CanBeMove.cs" />
     <Compile Include="Assets\Scripts\FinalHole.cs" />
     <Compile Include="Assets\Scripts\Stone.cs" />
     <Compile Include="Assets\Scripts\Wood.cs" />

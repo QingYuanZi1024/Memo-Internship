@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Runtime.CompilerServices;
+using Unity.Burst.CompilerServices;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Rendering;
 using static UnityEditor.ShaderData;
 using static UnityEditor.VersionControl.Asset;
@@ -63,6 +66,7 @@ public class SnakeHead : MonoBehaviour
         // GetKeyValue();
 
         MoveJudge();
+        CrashJudge();
         MoveAction();
 
         UpdateSprite();
@@ -124,6 +128,30 @@ public class SnakeHead : MonoBehaviour
         }
     }
 
+    private void CrashJudge()
+    {
+        string RecurStr = "null";
+
+        if (SnakeMoveDirection != Vector2.zero)
+        {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, SnakeMoveDirection, 1f, detectLayer);
+
+            if (hit && (hit.collider.tag.Equals("Stone") || hit.collider.tag.Equals("Wood")))
+            {
+                SnakeMoveDirection = Vector2.zero;
+            }
+            if (hit && (hit.collider.tag.Equals("Banana") || hit.collider.tag.Equals("Pepper") || hit.collider.tag.Equals("Ice")))
+            {
+                RecurStr = hit.collider.GetComponent<Ice>().RecursionJudge(SnakeMoveDirection);
+            }
+        }
+        if (RecurStr == "Stone" || RecurStr == "wood")
+        {
+
+        }
+
+    }
+
     private void MoveAction()
     {
         //
@@ -157,11 +185,6 @@ public class SnakeHead : MonoBehaviour
             // reset
             SnakeMoveDirection = Vector2.zero;
         }
-
-    }
-
-    private void CrashJudge()
-    {
 
     }
 
