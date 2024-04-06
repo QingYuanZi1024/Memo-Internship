@@ -71,7 +71,7 @@ public class CanBeMove : MonoBehaviour
             // Debug.Log("777");
             if (hit.collider.tag.Equals("Banana") || hit.collider.tag.Equals("Pepper") || hit.collider.tag.Equals("Ice"))
             {
-                RaycastHit2D next_hit = Physics2D.Raycast(hit.transform.position, MoveDirection, 1f, detectLayer);
+                RaycastHit2D next_hit = Physics2D.Raycast(hit.transform.position + 1f * MoveDirection, MoveDirection, 0.25f, detectLayer);
 
                 if (!next_hit || next_hit.collider.tag.Equals("SandPit") || next_hit.collider.tag.Equals("FinalHole"))
                 {
@@ -107,9 +107,10 @@ public class CanBeMove : MonoBehaviour
             }
             if (hit.collider.tag.Equals("Stone") || hit.collider.tag.Equals("Wood"))
             {
+                Debug.Log("nnn");
                 if (tag.Equals("Pepper") && hit.collider.tag.Equals("Wood"))
                 {
-                    Destroy(gameObject);
+                    gameObject.SetActive(false);
                     Destroy(hit.collider.gameObject);
                     return true;
                 }
@@ -119,10 +120,12 @@ public class CanBeMove : MonoBehaviour
                 }
                 else if (tag.Equals("Banana"))
                 {
-                    Destroy(gameObject);
+                    gameObject.SetActive(false);
+                    
                     GameObject go = GameObject.Find("SnakeHead");
                     SnakeHead sh = (SnakeHead)go.GetComponent(typeof(SnakeHead));
                     sh.States = "Happiness";
+                    Debug.Log("mmm");
                     return true;
                 }
                 else

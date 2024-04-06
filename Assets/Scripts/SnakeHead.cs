@@ -300,7 +300,7 @@ public class SnakeHead : MonoBehaviour
     public void UpdateBodySprite()
     {
         //Debug.Log("asd");
-        if (States == "Existing")
+        if (States == "Existing" || States == "Happiness")
         {
             for (int i = 0; i < SnakeBodies.ToArray().Length; i++)
             {
@@ -322,7 +322,7 @@ public class SnakeHead : MonoBehaviour
 
     public void UpdateTailSprite()
     {
-        if (States == "Existing")
+        if (States == "Existing" || States == "Happiness")
         {
             SnakeTail.UpdateSprite(SnakeBodies[SnakeBodies.ToArray().Length - 1].transform.position);
         } 
