@@ -187,9 +187,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Stone
       objectReference: {fileID: 0}
+    - target: {fileID: 3636159276726409843, guid: 5d20c1cd39c524e4e88d834da115ce9d, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3681355699439318173, guid: 5d20c1cd39c524e4e88d834da115ce9d, type: 3}
       propertyPath: m_Offset.y
       value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681355699439318173, guid: 5d20c1cd39c524e4e88d834da115ce9d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -290,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2093004914554945637, guid: da45635e7db1972418aebfc68584e93f, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2093004914554945637, guid: da45635e7db1972418aebfc68584e93f, type: 3}
       propertyPath: m_TagString
@@ -339,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 253282852723954289, guid: b92c8a924b15a5941bb6f455c8aaaa55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 253282852723954289, guid: b92c8a924b15a5941bb6f455c8aaaa55, type: 3}
       propertyPath: m_LocalPosition.y
@@ -383,7 +391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2414319737233376460, guid: b92c8a924b15a5941bb6f455c8aaaa55, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3681355699439318173, guid: b92c8a924b15a5941bb6f455c8aaaa55, type: 3}
       propertyPath: m_IsTrigger
@@ -404,28 +412,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2414319737233376460, guid: b92c8a924b15a5941bb6f455c8aaaa55, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 436709000}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b92c8a924b15a5941bb6f455c8aaaa55, type: 3}
---- !u!1 &436708999 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2414319737233376460, guid: b92c8a924b15a5941bb6f455c8aaaa55, type: 3}
-  m_PrefabInstance: {fileID: 436708998}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &436709000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 436708999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fc0cee08475255419f87d1282b7d998, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,6 +579,10 @@ PrefabInstance:
       value: SnakeTail
       objectReference: {fileID: 0}
     - target: {fileID: 6938040142136730863, guid: 7f46eb1d0214aba438b0f2d74c5898de, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6938040142136730863, guid: 7f46eb1d0214aba438b0f2d74c5898de, type: 3}
       propertyPath: m_TagString
       value: SnakeTail
       objectReference: {fileID: 0}
@@ -625,7 +617,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2322796707143192007, guid: 13ad6fe3dfe6415419158c1d7eb67f7e, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2322796707143192007, guid: 13ad6fe3dfe6415419158c1d7eb67f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -673,7 +665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4084278474863684238, guid: 13ad6fe3dfe6415419158c1d7eb67f7e, type: 3}
       propertyPath: detectLayer.m_Bits
-      value: 3072
+      value: 7168
       objectReference: {fileID: 0}
     - target: {fileID: 4407708632851397429, guid: 13ad6fe3dfe6415419158c1d7eb67f7e, type: 3}
       propertyPath: m_Name
@@ -766,7 +758,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2322796707143192007, guid: b1fc8d58ba57d7847af4e6d4cee884bb, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2322796707143192007, guid: b1fc8d58ba57d7847af4e6d4cee884bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -819,6 +811,10 @@ PrefabInstance:
     - target: {fileID: 4407708632851397429, guid: b1fc8d58ba57d7847af4e6d4cee884bb, type: 3}
       propertyPath: m_TagString
       value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 6845819230360729196, guid: b1fc8d58ba57d7847af4e6d4cee884bb, type: 3}
+      propertyPath: m_BodyType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7261497264101899771, guid: b1fc8d58ba57d7847af4e6d4cee884bb, type: 3}
       propertyPath: m_Offset.y
@@ -882,7 +878,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 253282852723954289, guid: b92c8a924b15a5941bb6f455c8aaaa55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 253282852723954289, guid: b92c8a924b15a5941bb6f455c8aaaa55, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1002,8 +998,12 @@ PrefabInstance:
       value: SnakeBody_02
       objectReference: {fileID: 0}
     - target: {fileID: 6938040142136730863, guid: 10e808fcfb67a144b988e9db97a0a6b1, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6938040142136730863, guid: 10e808fcfb67a144b988e9db97a0a6b1, type: 3}
       propertyPath: m_TagString
-      value: Snake
+      value: SnakeBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1082,6 +1082,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Banana_02
       objectReference: {fileID: 0}
+    - target: {fileID: 2093004914554945637, guid: 21ce58f4b74f21b4e8a5c8e2e1bda1e8, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4035294029267097566, guid: 21ce58f4b74f21b4e8a5c8e2e1bda1e8, type: 3}
       propertyPath: m_BodyType
       value: 1
@@ -1155,6 +1159,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FinalHole
       objectReference: {fileID: 0}
+    - target: {fileID: 2093004914554945637, guid: bbd2a45e3ffb40f44b07270d2bb522d4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5667504025328280619, guid: bbd2a45e3ffb40f44b07270d2bb522d4, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -1174,11 +1182,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2322796707143192007, guid: 13ad6fe3dfe6415419158c1d7eb67f7e, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2322796707143192007, guid: 13ad6fe3dfe6415419158c1d7eb67f7e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2322796707143192007, guid: 13ad6fe3dfe6415419158c1d7eb67f7e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1215,6 +1223,10 @@ PrefabInstance:
     - target: {fileID: 2322796707143192007, guid: 13ad6fe3dfe6415419158c1d7eb67f7e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084278474863684238, guid: 13ad6fe3dfe6415419158c1d7eb67f7e, type: 3}
+      propertyPath: detectLayer.m_Bits
+      value: 7168
       objectReference: {fileID: 0}
     - target: {fileID: 4407708632851397429, guid: 13ad6fe3dfe6415419158c1d7eb67f7e, type: 3}
       propertyPath: m_Name
@@ -1301,13 +1313,17 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Stone
       objectReference: {fileID: 0}
+    - target: {fileID: 6845819230360729196, guid: 4696d3c4026bf7b43949ccff6cae0eb2, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7261497264101899771, guid: 4696d3c4026bf7b43949ccff6cae0eb2, type: 3}
       propertyPath: m_Offset.y
       value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7261497264101899771, guid: 4696d3c4026bf7b43949ccff6cae0eb2, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1438,8 +1454,12 @@ PrefabInstance:
       value: SnakeBody_01
       objectReference: {fileID: 0}
     - target: {fileID: 6938040142136730863, guid: 10e808fcfb67a144b988e9db97a0a6b1, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6938040142136730863, guid: 10e808fcfb67a144b988e9db97a0a6b1, type: 3}
       propertyPath: m_TagString
-      value: Snake
+      value: SnakeBody
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1460,7 +1480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1014573398214919574, guid: c2b69c14b5ba37646b0f8f8fe6dd1ff4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 1014573398214919574, guid: c2b69c14b5ba37646b0f8f8fe6dd1ff4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1504,7 +1524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1226464871969456308, guid: c2b69c14b5ba37646b0f8f8fe6dd1ff4, type: 3}
       propertyPath: m_TagString
-      value: Snake
+      value: SnakeHead
       objectReference: {fileID: 0}
     - target: {fileID: 5659154478858666288, guid: c2b69c14b5ba37646b0f8f8fe6dd1ff4, type: 3}
       propertyPath: m_SortingLayer
@@ -1536,7 +1556,7 @@ PrefabInstance:
       objectReference: {fileID: 604887148}
     - target: {fileID: 7852287212131372322, guid: c2b69c14b5ba37646b0f8f8fe6dd1ff4, type: 3}
       propertyPath: detectLayer.m_Bits
-      value: 3072
+      value: 6144
       objectReference: {fileID: 0}
     - target: {fileID: 7852287212131372322, guid: c2b69c14b5ba37646b0f8f8fe6dd1ff4, type: 3}
       propertyPath: SnakeBodies.Array.size
@@ -1719,7 +1739,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2093004914554945637, guid: 21ce58f4b74f21b4e8a5c8e2e1bda1e8, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2093004914554945637, guid: 21ce58f4b74f21b4e8a5c8e2e1bda1e8, type: 3}
       propertyPath: m_TagString
@@ -1767,7 +1787,7 @@ PrefabInstance:
       objectReference: {fileID: 187643738}
     - target: {fileID: 5311935400548967487, guid: 21ce58f4b74f21b4e8a5c8e2e1bda1e8, type: 3}
       propertyPath: detectLayer.m_Bits
-      value: 3072
+      value: 7168
       objectReference: {fileID: 0}
     - target: {fileID: 5667504025328280619, guid: 21ce58f4b74f21b4e8a5c8e2e1bda1e8, type: 3}
       propertyPath: m_IsTrigger
@@ -1788,7 +1808,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 253282852723954289, guid: 5d20c1cd39c524e4e88d834da115ce9d, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 253282852723954289, guid: 5d20c1cd39c524e4e88d834da115ce9d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1844,11 +1864,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3636159276726409843, guid: 5d20c1cd39c524e4e88d834da115ce9d, type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3681355699439318173, guid: 5d20c1cd39c524e4e88d834da115ce9d, type: 3}
       propertyPath: m_Offset.y
       value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3681355699439318173, guid: 5d20c1cd39c524e4e88d834da115ce9d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

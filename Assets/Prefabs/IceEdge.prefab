@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FallSpeed: 8
   States: 
-  SnakeHead: {fileID: 0}
   detectLayer:
     serializedVersion: 2
     m_Bits: 3072
+  sortingGroup: {fileID: 0}

@@ -135,9 +135,11 @@ public class SnakeHead : MonoBehaviour
         if (SnakeMoveDirection != Vector2.zero)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, SnakeMoveDirection, 1f, detectLayer);
-
+            if (hit)
+                Debug.Log(hit.collider.tag);
             if (hit && (hit.collider.tag.Equals("Stone") || hit.collider.tag.Equals("Wood")))
             {
+                //Debug.Log("aaa");
                 SnakeMoveDirection = Vector2.zero;
             }
             if (hit && (hit.collider.tag.Equals("Banana") || hit.collider.tag.Equals("Pepper") || hit.collider.tag.Equals("Ice")))

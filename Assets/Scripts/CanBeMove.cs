@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using static UnityEditor.VersionControl.Asset;
 
 public class CanBeMove : MonoBehaviour
@@ -14,6 +15,8 @@ public class CanBeMove : MonoBehaviour
     //public SnakeHead SnakeHead;
 
     public LayerMask detectLayer;
+
+    public SortingGroup sortingGroup;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +39,8 @@ public class CanBeMove : MonoBehaviour
             States = "Falling";
             // rb.bodyType = RigidbodyType2D.Dynamic;
             gameObject.layer = LayerMask.NameToLayer("-2");
+            sortingGroup = GetComponent<SortingGroup>();
+            sortingGroup.sortingLayerName = "-2";
         }
 
         if (other.gameObject.tag == "Boundary")
@@ -53,10 +58,11 @@ public class CanBeMove : MonoBehaviour
 
     public bool ObjJudgeAndMove(Vector3 MoveDirection)
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, MoveDirection, 1f, detectLayer);
-        // Debug.Log("hit");
+        RaycastHit2D hit = Physics2D.Raycast(transform.position + 1f * MoveDirection, MoveDirection, 0.25f, detectLayer);
+        Debug.Log("hit");
         if (!hit || hit.collider.tag.Equals("SandPit") || hit.collider.tag.Equals("FinalHole"))
         {
+            Debug.Log("xxx");
             transform.Translate(MoveDirection);
             return true;
         }
