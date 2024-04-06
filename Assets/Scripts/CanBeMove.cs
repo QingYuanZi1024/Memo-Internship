@@ -47,12 +47,14 @@ public class CanBeMove : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void JudgeFalling()
+    public bool JudgeFalling()
     {
         if (States == "Falling")
         {
             transform.Translate(Vector3.down * FallSpeed * Time.deltaTime);
+            return true;
         }
+        return false;
     }
 
 
@@ -120,12 +122,12 @@ public class CanBeMove : MonoBehaviour
                 }
                 else if (tag.Equals("Banana"))
                 {
-                    gameObject.SetActive(false);
-                    
                     GameObject go = GameObject.Find("SnakeHead");
-                    SnakeHead sh = (SnakeHead)go.GetComponent(typeof(SnakeHead));
-                    sh.States = "Happiness";
+                    SnakeHead snakeHead = (SnakeHead)go.GetComponent(typeof(SnakeHead));
+                    snakeHead.States = "Happiness";
+                    snakeHead.NeedToGrow = true;
                     Debug.Log("mmm");
+                    Destroy(gameObject);
                     return true;
                 }
                 else

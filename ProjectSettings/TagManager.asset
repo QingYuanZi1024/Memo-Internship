@@ -54,13 +54,13 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: 
+  - name: -2
     uniqueID: 4194650429
     locked: 0
-  - name: -2
+  - name: -1
     uniqueID: 4287761751
     locked: 0
-  - name: -1
+  - name: -0.5
     uniqueID: 4198697487
     locked: 0
   - name: 0

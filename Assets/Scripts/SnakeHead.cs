@@ -35,7 +35,7 @@ public class SnakeHead : MonoBehaviour
 
     public SnakeTail SnakeTail;
 
-    public GameObject SnakeSeqPrefab;
+    public GameObject SnakeBodyPrefab;
 
     public GameObject FireEffectPrefab;
 
@@ -52,6 +52,8 @@ public class SnakeHead : MonoBehaviour
     private SortingGroup sortingGroup;
 
     public bool HangOrNot;
+
+    public bool NeedToGrow = false;
 
     // Start is called before the first frame update
     void Start()
@@ -99,27 +101,31 @@ public class SnakeHead : MonoBehaviour
 
     private void MoveJudge()
     {
-        if (States != "Existing")
+        if (States == "Falling" || States == "Spraying")
             SnakeMoveDirection = Vector2.zero;
         else
         {
             if (Input.GetKeyDown(KeyCode.W))
             {
+                States = "Existing";
                 if (SnakeHeadDirection != Vector2.down)
                     SnakeMoveDirection = Vector2.up;
             }
             else if (Input.GetKeyDown(KeyCode.S))
             {
+                States = "Existing";
                 if (SnakeHeadDirection != Vector2.up)
                     SnakeMoveDirection = Vector2.down;
             }
             else if (Input.GetKeyDown(KeyCode.A))
             {
+                States = "Existing";
                 if (SnakeHeadDirection != Vector2.right)
                     SnakeMoveDirection = Vector2.left;
             }
             else if (Input.GetKeyDown(KeyCode.D))
             {
+                States = "Existing";
                 if (SnakeHeadDirection != Vector2.left)
                     SnakeMoveDirection = Vector2.right;
             }
@@ -154,38 +160,86 @@ public class SnakeHead : MonoBehaviour
         }
     }
 
+    private void JudgeGrow()
+    {
+
+    }
+
     private void MoveAction()
     {
         //
         if(SnakeMoveDirection != Vector2.zero)
         {
-            List<Vector3> TargetPos = new List<Vector3>() { transform.position };
-
-            foreach (SnakeBody b in SnakeBodies)
+            if (NeedToGrow == false)
             {
-                TargetPos.Add(b.transform.position);
-            }
+                List<Vector3> TargetPos = new List<Vector3>() { transform.position };
 
-            // Head Move
+                foreach (SnakeBody b in SnakeBodies)
+                {
+                    TargetPos.Add(b.transform.position);
+                }
 
-            transform.Translate(SnakeMoveDirection);
+                // Head Move
 
-            // Body Move
+                transform.Translate(SnakeMoveDirection);
 
-            for (int i = 0; i < SnakeBodies.ToArray().Length; i++)
-            {
+                // Body Move
+
+                for (int i = 0; i < SnakeBodies.ToArray().Length; i++)
+                {
                     SnakeBodies[i].transform.position = TargetPos[i];
+                }
+
+                // Tail Move
+
+                SnakeTail.transform.position = TargetPos[SnakeBodies.ToArray().Length];
+
+                //convert
+                SnakeHeadDirection = SnakeMoveDirection;
+
+                // reset
+                SnakeMoveDirection = Vector2.zero;
             }
+            else if (NeedToGrow == true) 
+            {
+                GameObject newBody = Instantiate(SnakeBodyPrefab, transform);
 
-            // Tail Move
+                // newBody.transform.position = transform.position;
 
-            SnakeTail.transform.position = TargetPos[SnakeBodies.ToArray().Length];
+                List<Vector3> TargetPos = new List<Vector3>() { transform.position };
 
-            //convert
-            SnakeHeadDirection = SnakeMoveDirection;
+                foreach (SnakeBody b in SnakeBodies)
+                {
+                    TargetPos.Add(b.transform.position);
+                }
 
-            // reset
-            SnakeMoveDirection = Vector2.zero;
+                Vector3 temppos = SnakeTail.transform.position;
+
+                transform.Translate(SnakeMoveDirection);
+
+                SnakeTail.transform.position = temppos;
+
+                // Debug.Log(SnakeBodies.Count);
+
+                for (int i = 0; i < SnakeBodies.ToArray().Length; i++)
+                {
+                    SnakeBodies[i].transform.position = TargetPos[i];
+                }
+
+                newBody.transform.position = TargetPos[SnakeBodies.ToArray().Length];
+
+                SnakeBodies.Add(newBody.GetComponent<SnakeBody>());
+
+                // Debug.Log(SnakeBodies.Count);
+
+                NeedToGrow = false;
+
+                //convert
+                SnakeHeadDirection = SnakeMoveDirection;
+
+                // reset
+                SnakeMoveDirection = Vector2.zero;
+            }
         }
 
     }
@@ -300,7 +354,7 @@ public class SnakeHead : MonoBehaviour
     public void UpdateBodySprite()
     {
         //Debug.Log("asd");
-        if (States == "Existing" || States == "Happiness")
+        if (States == "Existing" || States == "Happiness" || States == "Sadness")
         {
             for (int i = 0; i < SnakeBodies.ToArray().Length; i++)
             {
@@ -322,7 +376,7 @@ public class SnakeHead : MonoBehaviour
 
     public void UpdateTailSprite()
     {
-        if (States == "Existing" || States == "Happiness")
+        if (States == "Existing" || States == "Happiness" || States == "Sadness")
         {
             SnakeTail.UpdateSprite(SnakeBodies[SnakeBodies.ToArray().Length - 1].transform.position);
         } 

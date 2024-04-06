@@ -6,6 +6,8 @@ public class Pepper : CanBeMove
 {
     private Rigidbody2D rb_pepper;
 
+    bool Judge = false;
+
     // public float FallSpeed = 8f;
 
     //public string States;
@@ -24,6 +26,13 @@ public class Pepper : CanBeMove
     // Update is called once per frame
     void Update()
     {
-        JudgeFalling();
+        Judge = JudgeFalling();
+        if (Judge)
+        {
+            GameObject go = GameObject.Find("SnakeHead");
+            SnakeHead sh = (SnakeHead)go.GetComponent(typeof(SnakeHead));
+            sh.States = "Sadness";
+            // Judge = false;
+        }
     }
 }

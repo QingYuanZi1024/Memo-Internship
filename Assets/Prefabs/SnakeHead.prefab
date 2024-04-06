@@ -203,7 +203,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   SnakeTail: {fileID: 0}
-  SnakeSeqPrefab: {fileID: 0}
+  SnakeBodyPrefab: {fileID: 0}
   FireEffectPrefab: {fileID: 0}
   SnakeHeadDirection: {x: 0, y: 0}
   SnakeMoveDirection: {x: 0, y: 0}
@@ -211,6 +211,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   HangOrNot: 0
+  NeedToGrow: 0
 --- !u!210 &5659154478858666288
 SortingGroup:
   m_ObjectHideFlags: 0
