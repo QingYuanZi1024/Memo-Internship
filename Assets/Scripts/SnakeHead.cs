@@ -66,7 +66,7 @@ public class SnakeHead : MonoBehaviour
         // GetKeyValue();
 
         MoveJudge();
-        CrashJudge();
+        CrashJudgeAndMove();
         MoveAction();
 
         UpdateSprite();
@@ -142,8 +142,9 @@ public class SnakeHead : MonoBehaviour
             }
             if (hit && (hit.collider.tag.Equals("Banana") || hit.collider.tag.Equals("Pepper") || hit.collider.tag.Equals("Ice")))
             {
-                TempJudge = hit.collider.GetComponent<CanBeMove>().RecursionJudgeAndMove(SnakeMoveDirection, true);
-                if (TempJudge)
+                // Debug.Log("666");
+                TempJudge = hit.collider.GetComponent<CanBeMove>().ObjJudgeAndMove(SnakeMoveDirection);
+                if (!TempJudge)
                 {
                     SnakeMoveDirection = Vector2.zero;
                 }
@@ -296,7 +297,7 @@ public class SnakeHead : MonoBehaviour
 
     public void UpdateBodySprite()
     {
-        Debug.Log("asd");
+        //Debug.Log("asd");
         if (States == "Existing")
         {
             for (int i = 0; i < SnakeBodies.ToArray().Length; i++)

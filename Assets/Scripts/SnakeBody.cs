@@ -38,7 +38,7 @@ public class SnakeBody : MonoBehaviour
 
     public void UpdateSprite(Vector3 before, Vector3 next)
     {
-        Debug.Log("1234");
+        // Debug.Log("1234");
         if (((transform.TransformPoint(Vector3.zero) - next) == Vector3.left && (before - transform.TransformPoint(Vector3.zero)) == Vector3.down ) || ((transform.TransformPoint(Vector3.zero) - next) == Vector3.up && (before - transform.TransformPoint(Vector3.zero)) == Vector3.right))
         {
             GetComponent<SpriteRenderer>().sprite = SnakeBodyCorner[0];

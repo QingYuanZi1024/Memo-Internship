@@ -9,9 +9,9 @@ public class CanBeMove : MonoBehaviour
 
     public float FallSpeed = 8f;
 
-    public string States;
+    public string States;  // Existing Falling Spraying
 
-    public SnakeHead SnakeHead;
+    //public SnakeHead SnakeHead;
 
     public LayerMask detectLayer;
 
@@ -28,7 +28,7 @@ public class CanBeMove : MonoBehaviour
         JudgeFalling();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         //Debug.Log("test02");
         if (other.gameObject.tag == "GravityRange")
@@ -42,7 +42,7 @@ public class CanBeMove : MonoBehaviour
             Destroy(gameObject);
     }
 
-    void JudgeFalling()
+    public void JudgeFalling()
     {
         if (States == "Falling")
         {
@@ -50,51 +50,82 @@ public class CanBeMove : MonoBehaviour
         }
     }
 
-    public void ObjectMove(Vector3 MoveDirection)
-    {
-        transform.Translate(MoveDirection);
-    }
 
-    public bool EatOrNot()
-    {
-            if (tag == "Pepper" || tag == "Banana")
-            {
-                RealiseEat(SnakeHead);
-                return true;
-            }
-            else return false;
-    }
-
-    public bool RecursionJudgeAndMove(Vector3 MoveDirection, bool TheFirstOrNot)
+    public bool ObjJudgeAndMove(Vector3 MoveDirection)
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, MoveDirection, 1f, detectLayer);
         // Debug.Log("hit");
-        if (!hit)
+        if (!hit || hit.collider.tag.Equals("SandPit") || hit.collider.tag.Equals("FinalHole"))
         {
-            ObjectMove(MoveDirection);
+            transform.Translate(MoveDirection);
             return true;
         }
-        if (hit)
+        else
         {
-            if (hit.collider.GetComponent<CanBeMove>() != null)
+            // Debug.Log("777");
+            if (hit.collider.tag.Equals("Banana") || hit.collider.tag.Equals("Pepper") || hit.collider.tag.Equals("Ice"))
             {
-                bool TempJudge = hit.collider.GetComponent<CanBeMove>().RecursionJudgeAndMove(MoveDirection, false);
-                if (TempJudge)
+                RaycastHit2D next_hit = Physics2D.Raycast(hit.transform.position, MoveDirection, 1f, detectLayer);
+
+                if (!next_hit || next_hit.collider.tag.Equals("SandPit") || next_hit.collider.tag.Equals("FinalHole"))
                 {
-                    ObjectMove(MoveDirection);
+                    hit.collider.gameObject.transform.Translate(MoveDirection);
+                    transform.Translate(MoveDirection);
+                    return true;
+                }
+                else if (next_hit.collider.tag.Equals("Stone") || next_hit.collider.tag.Equals("Wood"))
+                {
+                    if (tag.Equals("Pepper") && hit.collider.tag.Equals("Ice"))
+                    {
+                        Destroy(gameObject);
+                        Destroy(hit.collider.gameObject);
+                        return true;
+                    }
+                    else if (tag.Equals("Banana"))
+                    {
+                        Destroy(gameObject);
+                        GameObject go = GameObject.Find("SnakeHead");
+                        SnakeHead sh = (SnakeHead)go.GetComponent(typeof(SnakeHead));
+                        sh.States = "Happiness";
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
                 else
                 {
-                    if (TheFirstOrNot)
-                        return EatOrNot();
+                    return false;
                 }
             }
-            else
+            if (hit.collider.tag.Equals("Stone") || hit.collider.tag.Equals("Wood"))
             {
-                if (TheFirstOrNot)
-                    return EatOrNot();
+                if (tag.Equals("Pepper") && hit.collider.tag.Equals("Wood"))
+                {
+                    Destroy(gameObject);
+                    Destroy(hit.collider.gameObject);
+                    return true;
+                }
+                else if (tag.Equals("Pepper") && hit.collider.tag.Equals("Stone"))
+                {
+
+                }
+                else if (tag.Equals("Banana"))
+                {
+                    Destroy(gameObject);
+                    GameObject go = GameObject.Find("SnakeHead");
+                    SnakeHead sh = (SnakeHead)go.GetComponent(typeof(SnakeHead));
+                    sh.States = "Happiness";
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
         }
+        // Debug.Log("zzz");
         return false;
     }
 }

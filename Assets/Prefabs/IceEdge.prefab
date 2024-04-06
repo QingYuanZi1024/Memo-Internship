@@ -189,4 +189,4 @@ MonoBehaviour:
   SnakeHead: {fileID: 0}
   detectLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 3072

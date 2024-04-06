@@ -13,6 +13,8 @@ TagManager:
   - Boundary
   - GravityRange
   - SnakeTail
+  - SandPit
+  - FinalHole
   layers:
   - Default
   - TransparentFX
